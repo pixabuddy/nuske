@@ -1,4 +1,4 @@
-<img src="assets/meta-image.jpg" alt="Nuskë Meta Image">
+<img src="assets/meta-image.png" alt="Nuskë Meta Image">
 
 # Nuskë
 
