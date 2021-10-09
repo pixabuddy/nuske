@@ -1,0 +1,278 @@
+// Color Variables
+$primary-light: #fff0f1;
+$primary: #ec1c24;
+$primary-md: #c60917;
+$primary-dark: #57070d;
+$secondary-light: #eff5ff;
+$secondary: #3d434c;
+$secondary-dark: #292e36;
+$para: #868a8f;
+$color-dark: #292e36;
+
+// Font Variables
+// (Heading font)
+$heading-black: 'Recoleta-Black';
+$heading-bold: 'Recoleta-Bold';
+$heading-semibold: 'Recoleta-SemiBold';
+$heading-medium: 'Recoleta-Medium';
+$heading-regular: 'Recoleta-Regular';
+
+// (Paragraph font)
+$para-black: 'Epilogue-Black';
+$para-extrabold: 'Epilogue-ExtraBold';
+$para-bold: 'Epilogue-Bold';
+$para-semibold: 'Epilogue-SemiBold';
+$para-medium: 'Epilogue-Medium';
+$para-regular: 'Epilogue-Regular';
+
+// import Heading fonts from local
+@font-face {
+	font-family: 'Recoleta-Black';
+	src: url('../font/Recoleta/Recoleta-Black.ttf');
+}
+@font-face {
+	font-family: 'Recoleta-Bold';
+	src: url('../font/Recoleta/Recoleta-Bold.ttf');
+}
+@font-face {
+	font-family: 'Recoleta-SemiBold';
+	src: url('../font/Recoleta/Recoleta-SemiBold.ttf');
+}
+@font-face {
+	font-family: 'Recoleta-Medium';
+	src: url('../font/Recoleta/Recoleta-Medium.ttf');
+}
+@font-face {
+	font-family: 'Recoleta-Regular';
+	src: url('../font/Recoleta/Recoleta-Regular.ttf');
+}
+
+// import Paragraph fonts from local
+@font-face {
+	font-family: 'Epilogue-Black';
+	src: url('../font/Epilogue/Epilogue-Black.ttf');
+}
+@font-face {
+	font-family: 'Epilogue-ExtraBold';
+	src: url('../font/Epilogue/Epilogue-ExtraBold.ttf');
+}
+@font-face {
+	font-family: 'Epilogue-Bold';
+	src: url('../font/Epilogue/Epilogue-Bold.ttf');
+}
+@font-face {
+	font-family: 'Epilogue-SemiBold';
+	src: url('../font/Epilogue/Epilogue-SemiBold.ttf');
+}
+@font-face {
+	font-family: 'Epilogue-Medium';
+	src: url('../font/Epilogue/Epilogue-Medium.ttf');
+}
+@font-face {
+	font-family: 'Epilogue-Regular';
+	src: url('../font/Epilogue/Epilogue-Regular.ttf');
+}
+
+// mixins
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin center__both {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// ======== mixins for flex row
+
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin flex-row_center {
+	@include flex-row;
+	justify-content: center;
+	align-items: center;
+}
+
+// ======== for flex column
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-column_center {
+	@include flex-column;
+	justify-content: center;
+	align-items: center;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 350px;         Small Phone
+350 - 600px;       Phone
+600 - 900px;       Table potrait
+900 - 1200px;      Table landscape
+1200 - 1800px ( is where the normal style is applies )
+1200 - 1800+ px;   Big desktop
+$breakpoint arguement choices :
+- sm-phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ ORDER: Base + Typography > genarel layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == sm-phone {
+		@media only screen and (max-width: 375px) {
+			@content;
+		} //  21.5em;
+	}
+
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 600px) {
+			@content;
+		} // 37.5em;
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 900px) {
+			@content;
+		} // 56.25em;
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 1200px) {
+			@content;
+		} // 75em;
+	}
+
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 1800px) {
+			@content;
+		} // 112.5em;
+	}
+}
+
+// Base
+/* ============================================ */
+/* ================ universal selector adjustment ================ */
+/* ============================================ */
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+/* ============================================ */
+/* ================ html font size adjustment ================ */
+/* ============================================ */
+
+html {
+	scroll-behavior: smooth;
+	// this defines what 1rem is
+	font-size: 10px;
+}
+
+/* ============================================ */
+/* ================ body customization ================ */
+/* ============================================ */
+
+body {
+	box-sizing: border-box;
+	background-color: #fff !important;
+	font-family: 'Recoleta-Bold', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 0.5px;
+
+	a {
+		text-decoration: none;
+	}
+
+	button,
+	button:focus {
+		outline: none;
+	}
+}
+
+/* ============================================ */
+/* ================ section padding ================ */
+/* ============================================ */
+
+section {
+	padding: 9rem 0;
+
+	@include respond(tab-land) {
+		padding: 6.5rem 0;
+	}
+
+	@include respond(tab-port) {
+		padding: 5.5rem 0;
+	}
+
+	@include respond(phone) {
+		padding: 6.5rem 12px;
+	}
+
+	.row {
+		padding: 0 3rem;
+
+		@include respond(tab-port) {
+			padding: 0;
+		}
+
+		@include respond(phone) {
+			padding: 0 1.4rem;
+		}
+	}
+}
+
+/* ============================================ */
+/* ================ no gutters for row ================ */
+/* ============================================ */
+
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.row.no-gutters > [class^='col-'],
+.row.no-gutters > [class*=' col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ============================================ */
+/* ================ customize selection ================ */
+/* ============================================ */
+
+::selection {
+	background-color: $color-dark;
+	color: #fff;
+}
+
+// Typography
+
+div {
+	width: 100%;
+	height: 400px;
+
+	h1 {
+		font-family: $heading-medium;
+		font-size: 4rem;
+	}
+}

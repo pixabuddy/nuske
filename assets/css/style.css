@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'Recoleta-Black';
+  src: url("../font/Recoleta/Recoleta-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Recoleta-Bold';
+  src: url("../font/Recoleta/Recoleta-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Recoleta-SemiBold';
+  src: url("../font/Recoleta/Recoleta-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Recoleta-Medium';
+  src: url("../font/Recoleta/Recoleta-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Recoleta-Regular';
+  src: url("../font/Recoleta/Recoleta-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-Black';
+  src: url("../font/Epilogue/Epilogue-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-ExtraBold';
+  src: url("../font/Epilogue/Epilogue-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-Bold';
+  src: url("../font/Epilogue/Epilogue-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-SemiBold';
+  src: url("../font/Epilogue/Epilogue-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-Medium';
+  src: url("../font/Epilogue/Epilogue-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Epilogue-Regular';
+  src: url("../font/Epilogue/Epilogue-Regular.ttf");
+}
+
+/*
+0 - 350px;         Small Phone
+350 - 600px;       Phone
+600 - 900px;       Table potrait
+900 - 1200px;      Table landscape
+1200 - 1800px ( is where the normal style is applies )
+1200 - 1800+ px;   Big desktop
+$breakpoint arguement choices :
+- sm-phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ ORDER: Base + Typography > genarel layout + grid > page layout > components
+*/
+/* ============================================ */
+/* ================ universal selector adjustment ================ */
+/* ============================================ */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ============================================ */
+/* ================ html font size adjustment ================ */
+/* ============================================ */
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+/* ============================================ */
+/* ================ body customization ================ */
+/* ============================================ */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff !important;
+  font-family: 'Recoleta-Bold', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body button,
+body button:focus {
+  outline: none;
+}
+
+/* ============================================ */
+/* ================ section padding ================ */
+/* ============================================ */
+section {
+  padding: 9rem 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  section {
+    padding: 6.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    padding: 5.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 6.5rem 12px;
+  }
+}
+
+section .row {
+  padding: 0 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  section .row {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section .row {
+    padding: 0 1.4rem;
+  }
+}
+
+/* ============================================ */
+/* ================ no gutters for row ================ */
+/* ============================================ */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class^='col-'],
+.row.no-gutters > [class*=' col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* ============================================ */
+/* ================ customize selection ================ */
+/* ============================================ */
+::-moz-selection {
+  background-color: #292e36;
+  color: #fff;
+}
+::selection {
+  background-color: #292e36;
+  color: #fff;
+}
+
+div {
+  width: 100%;
+  height: 400px;
+}
+
+div h1 {
+  font-family: "Recoleta-Medium";
+  font-size: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
