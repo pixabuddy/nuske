@@ -460,9 +460,16 @@ section {
   transition: transform 500ms ease, background 500ms ease;
   transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
-  -webkit-box-shadow: 0 8px 45px rgba(211, 19, 32, 0.07);
-          box-shadow: 0 8px 45px rgba(211, 19, 32, 0.07);
+  -webkit-box-shadow: 0 8px 45px rgba(211, 19, 32, 0.1);
+          box-shadow: 0 8px 45px rgba(211, 19, 32, 0.1);
   z-index: 9999;
+}
+
+@media only screen and (max-width: 600px) {
+  .header_area.navbar_fixed .main_menu {
+    -webkit-box-shadow: 0 8px 45px rgba(211, 19, 32, 0.15);
+            box-shadow: 0 8px 45px rgba(211, 19, 32, 0.15);
+  }
 }
 
 .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
