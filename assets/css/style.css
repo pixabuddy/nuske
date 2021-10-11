@@ -188,11 +188,23 @@ section {
   font-family: "Epilogue-Bold";
 }
 
+@media only screen and (max-width: 600px) {
+  .heading-sub {
+    font-size: 3.2rem;
+  }
+}
+
 .heading-sub__sub {
   font-size: 2.8rem;
   font-family: "Epilogue-Medium";
   color: #ec1c24;
   margin-top: 2.4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading-sub__sub {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-main {
@@ -204,10 +216,22 @@ section {
   color: #ec1c24;
 }
 
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 4.6rem;
+  }
+}
+
 .para {
   font-family: "Epilogue-Medium";
   font-size: 1.8rem;
   color: #868a8f;
+}
+
+@media only screen and (max-width: 600px) {
+  .para {
+    font-size: 1.6rem;
+  }
 }
 
 .btn-primary {
@@ -419,7 +443,7 @@ section {
   top: -70px;
   left: 0;
   right: 0;
-  padding: 10px 0;
+  padding: 0;
   background: rgba(255, 255, 255, 0.85);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -603,12 +627,6 @@ section {
   }
 }
 
-@media (max-width: 991px) {
-  .header_area .navbar-collapse {
-    padding: 15px 0px;
-  }
-}
-
 @media (max-width: 1619px) {
   .header_area .navbar .search {
     margin-left: 40px;
@@ -670,11 +688,11 @@ section {
     padding: 0;
   }
   .header_area .navbar .nav .nav-item .nav-link {
-    line-height: 40px;
+    line-height: auto;
     margin-right: 0;
     display: block;
-    border-bottom: 1px solid #ededed33;
-    border-radius: 0;
+    border-radius: 50px;
+    margin: 12px 0 0;
   }
   .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
     line-height: 40px;
@@ -716,9 +734,36 @@ section {
   background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner {
+    padding-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner .row br {
+    display: none;
+  }
+}
+
 .banner-left {
   width: 100%;
   padding-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-left {
+    padding-top: 0;
+  }
 }
 
 .banner-right {
@@ -734,10 +779,26 @@ section {
   left: -7rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner-right img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
 .banner-heading__h4 {
   font-family: "Epilogue-Medium";
   font-size: 2.2rem;
   color: #3d434c;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-heading__h4 {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
 }
 
 .banner-heading__h1 {
@@ -745,6 +806,12 @@ section {
   font-size: 7rem;
   color: #3d434c;
   margin-top: 2.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-heading__h1 {
+    font-size: 5.2rem;
+  }
 }
 
 .banner-heading__h1 span {
@@ -763,6 +830,12 @@ section {
   margin-top: 7rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner-action {
+    margin-top: 6rem;
+  }
+}
+
 .banner-btm {
   width: 100%;
   display: -webkit-box;
@@ -778,6 +851,12 @@ section {
   margin-top: 10rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner-btm {
+    margin-top: 7rem;
+  }
+}
+
 .banner-btm__g1 {
   width: 100%;
   display: -webkit-box;
@@ -789,6 +868,18 @@ section {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-btm__g1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .banner-btm__left .social-list {
@@ -811,6 +902,13 @@ section {
   text-shadow: 0px 8px 10px rgba(198, 9, 23, 0.15);
 }
 
+@media only screen and (max-width: 600px) {
+  .banner-btm__left .social-links a {
+    font-size: 2.4rem;
+    margin-right: 2rem;
+  }
+}
+
 .banner-btm__right .whatsapp-btn {
   background-color: #25d366;
   padding: 1.4rem 3rem;
@@ -830,6 +928,12 @@ section {
           box-shadow: 0px 9px 20px -5px rgba(37, 211, 102, 0.3);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-btm__right .whatsapp-btn {
+    margin-top: 2rem;
+  }
 }
 
 .banner-btm__right .whatsapp-btn span {
@@ -854,6 +958,13 @@ section {
   font-size: 1.8rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner-btm .scroll-text {
+    bottom: 6rem;
+    right: -42px;
+  }
+}
+
 .banner-btm .scroll-text span img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -862,6 +973,19 @@ section {
 
 .about {
   padding-bottom: 0;
+}
+
+.about .heading-sub {
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .about .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .about-left {
@@ -880,6 +1004,12 @@ section {
   margin-left: 4rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .about-right {
+    margin-left: 0;
+  }
+}
+
 .about-right .heading-main {
   margin: 3.8rem 0;
 }
@@ -889,12 +1019,26 @@ section {
   line-height: 1.8;
 }
 
+@media only screen and (max-width: 600px) {
+  .about-right .para {
+    padding-right: 0;
+  }
+}
+
 .plan {
   padding: 6rem 0;
   background: #fff0f1;
   background-image: url(../img/plan-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .plan {
+    background-repeat: repeat;
+    background-size: initial;
+    background-position: top left;
+  }
 }
 
 .plan-box {
@@ -1184,7 +1328,7 @@ section {
 }
 
 .footer {
-  padding: 8rem 0;
+  padding: 8rem 12px;
   background: #292e36;
 }
 
@@ -1324,7 +1468,7 @@ section {
           align-items: center;
   border-radius: 50%;
   border: 1px solid #f2fbff;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.65);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

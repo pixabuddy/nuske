@@ -284,11 +284,19 @@ section {
 		font-size: 3.6rem;
 		font-family: $para-bold;
 
+		@include respond(phone) {
+			font-size: 3.2rem;
+		}
+
 		&__sub {
 			font-size: 2.8rem;
 			font-family: $para-medium;
 			color: $primary;
 			margin-top: 2.4rem;
+
+			@include respond(phone) {
+				font-size: 2.5rem;
+			}
 		}
 	}
 
@@ -300,12 +308,20 @@ section {
 			color: $primary;
 		}
 	}
+
+	@include respond(phone) {
+		font-size: 4.6rem;
+	}
 }
 
 .para {
 	font-family: $para-medium;
 	font-size: 1.8rem;
 	color: $para;
+
+	@include respond(phone) {
+		font-size: 1.6rem;
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -520,7 +536,7 @@ section {
 	top: -70px;
 	left: 0;
 	right: 0;
-	padding: 10px 0;
+	padding: 0;
 	background: rgba(#fff, 0.85);
 	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
@@ -640,7 +656,7 @@ section {
 
 @media (max-width: 991px) {
 	.header_area .navbar-collapse {
-		padding: 15px 0px;
+		// padding: 15px 0px;
 	}
 }
 
@@ -714,11 +730,11 @@ section {
 	}
 
 	.header_area .navbar .nav .nav-item .nav-link {
-		line-height: 40px;
+		line-height: auto;
 		margin-right: 0;
 		display: block;
-		border-bottom: 1px solid #ededed33;
-		border-radius: 0;
+		border-radius: 50px;
+		margin: 12px 0 0;
 	}
 
 	.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
@@ -766,9 +782,29 @@ section {
 	background-repeat: no-repeat;
 	// background-size: cover;
 
+	@include respond(phone) {
+		padding-top: 5rem;
+	}
+
+	.row {
+		@include respond(phone) {
+			flex-direction: column-reverse;
+		}
+
+		br {
+			@include respond(phone) {
+				display: none;
+			}
+		}
+	}
+
 	&-left {
 		width: 100%;
 		padding-top: 2rem;
+
+		@include respond(phone) {
+			padding-top: 0;
+		}
 	}
 
 	&-right {
@@ -781,6 +817,13 @@ section {
 			position: absolute;
 			top: -4rem;
 			left: -7rem;
+
+			@include respond(phone) {
+				width: 100%;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
 		}
 	}
 
@@ -789,6 +832,11 @@ section {
 			font-family: $para-medium;
 			font-size: 2.2rem;
 			color: $secondary;
+
+			@include respond(phone) {
+				font-size: 2rem;
+				margin-top: 5rem;
+			}
 		}
 
 		&__h1 {
@@ -796,6 +844,10 @@ section {
 			font-size: 7rem;
 			color: $secondary;
 			margin-top: 2.2rem;
+
+			@include respond(phone) {
+				font-size: 5.2rem;
+			}
 
 			span {
 				color: $primary;
@@ -813,6 +865,10 @@ section {
 
 	&-action {
 		margin-top: 7rem;
+
+		@include respond(phone) {
+			margin-top: 6rem;
+		}
 	}
 
 	&-btm {
@@ -823,11 +879,20 @@ section {
 		position: relative;
 		margin-top: 10rem;
 
+		@include respond(phone) {
+			margin-top: 7rem;
+		}
+
 		&__g1 {
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+
+			@include respond(phone) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 		}
 
 		&__left {
@@ -849,6 +914,11 @@ section {
 						color: $primary;
 						text-shadow: 0px 8px 10px rgba(198, 9, 23, 0.15);
 					}
+
+					@include respond(phone) {
+						font-size: 2.4rem;
+						margin-right: 2rem;
+					}
 				}
 			}
 		}
@@ -869,6 +939,10 @@ section {
 				line-height: 1.8rem;
 				box-shadow: 0px 9px 20px -5px rgba(37, 211, 102, 0.3);
 				transition: all 0.3s;
+
+				@include respond(phone) {
+					margin-top: 2rem;
+				}
 
 				span {
 					font-size: 2.8rem;
@@ -892,6 +966,11 @@ section {
 			font-family: $para-regular;
 			font-size: 1.8rem;
 
+			@include respond(phone) {
+				bottom: 6rem;
+				right: -42px;
+			}
+
 			span {
 				img {
 					transform: rotate(90deg);
@@ -908,6 +987,16 @@ section {
 .about {
 	padding-bottom: 0;
 
+	.heading-sub {
+		margin-top: 6rem;
+	}
+
+	.row {
+		@include respond(phone) {
+			flex-direction: column-reverse;
+		}
+	}
+
 	&-left {
 		width: 100%;
 		height: auto;
@@ -923,6 +1012,10 @@ section {
 		margin-top: -5rem;
 		margin-left: 4rem;
 
+		@include respond(phone) {
+			margin-left: 0;
+		}
+
 		.heading {
 			&-main {
 				margin: 3.8rem 0;
@@ -932,6 +1025,10 @@ section {
 		.para {
 			padding-right: 6rem;
 			line-height: 1.8;
+
+			@include respond(phone) {
+				padding-right: 0;
+			}
 		}
 	}
 }
@@ -945,6 +1042,12 @@ section {
 	background-image: url(../img/plan-bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@include respond(phone) {
+		background-repeat: repeat;
+		background-size: initial;
+		background-position: top left;
+	}
 
 	&-box {
 		width: 100%;
@@ -1199,7 +1302,7 @@ section {
 // Footer part
 
 .footer {
-	padding: 8rem 0;
+	padding: 8rem 12px;
 	background: $secondary-dark;
 
 	&-left {
@@ -1302,7 +1405,7 @@ section {
 				@include flex-row_center;
 				border-radius: 50%;
 				border: 1px solid #f2fbff;
-				font-size: 2.2rem;
+				font-size: 2rem;
 				color: rgba($color: #fff, $alpha: 0.65);
 				transition: all 0.3s;
 
