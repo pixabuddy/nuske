@@ -245,6 +245,12 @@ section {
   transition: all 0.3s;
 }
 
+@media only screen and (max-width: 600px) {
+  .btn-primary {
+    font-size: 1.6rem;
+  }
+}
+
 .btn-primary:hover {
   background: #d31320 !important;
   text-decoration: none;
@@ -411,7 +417,7 @@ section {
 }
 
 .navbar_fixed .navbar {
-  margin-top: 0;
+  margin: 10px 0;
 }
 
 @media (min-width: 992px) {
@@ -933,6 +939,7 @@ section {
 @media only screen and (max-width: 600px) {
   .banner-btm__right .whatsapp-btn {
     margin-top: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -940,6 +947,12 @@ section {
   font-size: 2.8rem;
   margin-right: 1.2rem;
   line-height: 2.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-btm__right .whatsapp-btn span {
+    font-size: 2.4rem;
+  }
 }
 
 .banner-btm__right .whatsapp-btn:hover {
@@ -962,6 +975,7 @@ section {
   .banner-btm .scroll-text {
     bottom: 6rem;
     right: -42px;
+    font-size: 1.4rem;
   }
 }
 
