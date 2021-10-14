@@ -376,7 +376,7 @@ section {
 
 		.logo_h {
 			width: auto;
-			height: 64px;
+			height: 60px;
 
 			@include respond(phone) {
 				height: 52px;
@@ -507,7 +507,7 @@ section {
 // Navbar fixed starts
 .navbar_fixed {
 	.navbar {
-		margin: 10px 0;
+		margin: 5px 0;
 	}
 }
 
@@ -742,11 +742,11 @@ section {
 		margin-right: 0;
 		display: block;
 		border-radius: 50px;
-		margin: 12px 0 0;
+		// margin: 12px 0 0;
 	}
 
 	.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-		line-height: 40px;
+		line-height: auto;
 	}
 
 	.header_area .navbar .search {
@@ -764,6 +764,10 @@ section {
 
 	.header_area .navbar .nav .nav-item {
 		margin-right: 0;
+
+		&:first-child {
+			margin-top: 12px;
+		}
 	}
 }
 
